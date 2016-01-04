@@ -40,7 +40,7 @@ version="0.1.1">
     </config-file>
 
     <source-file src="src/android/HockeyAppPlugin.java" target-dir="src/org/nypr/cordova/hockeyappplugin/" />
-    <source-file src="src/android/HockeySDK-3.5.0.jar" target-dir="libs" />
+    <source-file src="src/android/HockeySDK-3.6.2.jar" target-dir="libs" />
 </platform>
 
 <!-- ios -->
@@ -60,10 +60,12 @@ version="0.1.1">
 
     <source-file src="src/ios/HockeyAppPlugin.m" />
 
-    <resource-file src="src/ios/HockeySDK.embeddedframework/Resources/HockeySDKResources.bundle" />
-    <resource-file src="src/ios/HockeySDK.embeddedframework/Resources/HockeySDK.xcconfig" />
+    <resource-file src="src/ios/HockeySDK.framework/Resources/HockeySDKResources.bundle" />
+    <!--<resource-file src="src/ios/HockeySDK.embeddedframework/Resources/HockeySDK.xcconfig" />-->
 
-    <framework src="src/ios/HockeySDK.embeddedframework/HockeySDK.framework" custom="true"/>
+    <framework src="src/ios/HockeySDK.framework" custom="true"/>
+    
+    <framework src="libc++.tbd"/>
     <framework src="AssetsLibrary.framework" />
     <framework src="CoreText.framework" />
     <framework src="CoreGraphics.framework" />
